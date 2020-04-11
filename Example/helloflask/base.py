@@ -3,5 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
-def helloworid():
+def helloworld():
     return "Hello Flask World!"
+
+app.run()
