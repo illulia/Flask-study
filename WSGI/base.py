@@ -7,7 +7,7 @@ app.debug = True
 def wsgi_test(): # (environ)flask의 환경변수 담음 (start_response)는 function
     def application(environ, start_response):
         body = 'The request method was %s' % environ['REQUEST_METHOD']
-        headers = [('Content-Type', 'text/html'),
+        headers = [('Content-Type', 'text/plain'),
                     ('Content-Length',str(len(body)))] # headers 튜플을 담은 리스트 형태
         start_response('200 OK', headers)
         return [body]
