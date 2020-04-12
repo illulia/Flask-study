@@ -1,9 +1,9 @@
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask(__name__) #__main__이 들어가게됨
 
-@app.route("/")
+@app.route("/") #도메인 경로 지정
 def helloworld():
-    return "Hello Flask World!"
+    return "Hello Flask World!" #response해줌
 
 app.run()
