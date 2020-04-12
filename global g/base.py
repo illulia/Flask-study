@@ -3,10 +3,10 @@ from flask import Flask, g
 app = Flask(__name__)
 app.debug = True
 
-@app.before_request
+@app.before_request #요청하기 이전에 무조건 실행
 def before_request():
     print("요청이전!")
-    g.str = "한글"
+    g.str = "한글" #g는 str값으로 "한글"을 가짐
 
 @app.route("/gg")
 def helloworld2():
