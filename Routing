@@ -1,22 +1,22 @@
 @app.route('/test')
 def ...
 
-메서드가 POST와 PUT일때만 실행하라
+# 메서드가 POST와 PUT일때만 실행하라
 @app.route('/test',method=['POST','PUT'])
 def ...
 ------------------------------------------------
-<tid>는 하나의 변수값
+# <tid>는 하나의 변수값
 @app.route('/test/<tid>')
 def test3(tid):
     print("tid is", tid)
 ------------------------------------------------
-page에 값이 들어오지 않았을때 index를 넣겠다
+# page에 값이 들어오지 않았을때 index를 넣겠다
 @app.route('/test', default={'page': 'index'})
 @app.route('/test/<page>')
 def xxx(page):
 ------------------------------------------------
-abc.com이라는 도메인으로 들어왔을때 실행해라
+# abc.com이라는 도메인으로 들어왔을때 실행해라
 @app.route('/test', host='abc.com')
 ------------------------------------------------
-/test로 들어올때 /new_test로 redirect시키겟다
+# /test로 들어올때 /new_test로 redirect시키겟다
 @app.route('/test', redirect_to='/new_test')
