@@ -1,0 +1,14 @@
+...get('<param name>',<default-value>,<type>)
+methods: get, getlist, clear, etc
+------------------------------------------------
+# GET
+request.args.get('q')
+------------------------------------------------
+# POST
+request.form.get('q', 123)
+------------------------------------------------
+# GET or POST
+request.value.get('v')
+------------------------------------------------
+# Parameters
+request.args.getlist('qs')

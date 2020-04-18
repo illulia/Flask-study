@@ -1,0 +1,11 @@
+from datetime import, datetime
+# request 처리 용 함수
+def ymd(fmt):
+    def trans(date_str):
+        return datetime.strptime(date_str, fmt)
+    return trans
+
+@app.route('/dt')
+def dt():
+    datestr = request.values.get('date', date.today(), type=ymd('%y-%m-%d'))
+    return "우리나라 시간 형식: "+ str(datestr) 

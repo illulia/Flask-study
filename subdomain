@@ -1,6 +1,6 @@
 app.config['SERVER_NAME'] = 'local.com:5000'
 ------------------------------------------------
-서브 도메인
+# 서브 도메인
 @app.route("/")
 def helloworld_local():
     return "Hello Local.com!"
