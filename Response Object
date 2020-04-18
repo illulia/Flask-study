@@ -1,0 +1,20 @@
+from flask import Response
+
+# Response Attributes
+ - headers
+ - status
+ - status_code
+ - data
+ - mimetype
+
+ex)
+res = Response("Test")
+------------------------------------------------
+# Program-Name은 Test Response이다. 를 헤더에 심어서 보냄
+res.headers.add('Program-Name','Test Response')
+------------------------------------------------
+# data를 This is Test Program.이라고 보내줌
+res.set_data("This is Test Program.")
+------------------------------------------------
+# cookie를 보내줌 (자동로그인)
+res.set_cookie("UserToken","A12Bc9")

@@ -1,0 +1,13 @@
+# html http의 형태냐 True/False
+request.is_xhr
+------------------------------------------------
+# URI route의 마지막 부분
+request.endpoint
+------------------------------------------------
+# ajax를 불럿을때 data를 받아옴
+request.get_json()
+------------------------------------------------
+#  업로드 용량 제한할때 쓰임
+app.config.update(MAX_CONTENT=1024*1024)
+# 현재 max content length를 알고 싶을때
+reauest.max_content_length
