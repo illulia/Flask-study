@@ -1,0 +1,16 @@
+from flask import Response
+
+# Cookie __init__ Arguments
+ - Key
+ - Value
+ - max_age (기간)
+ - expires (날짜)
+ - domain (서브도메인에도 사용할때)
+ - path (쿠키를 저장하는 곳)
+
+ex)
+res = Response("Test")
+res.set_cookie("UserToken", "A12Bc9")
+
+# other request
+request.Cookie.get('UserToken', 'default token')
