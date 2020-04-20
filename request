@@ -5,7 +5,7 @@ request.is_xhr
 request.endpoint
 ------------------------------------------------
 # ajax를 불럿을때 data를 받아옴
-request.get_json() 
+request.get_json()
 ------------------------------------------------
 #  업로드 용량 제한할때 쓰임
 app.config.update(MAX_CONTENT=1024*1024)

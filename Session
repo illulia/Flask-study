@@ -1,0 +1,13 @@
+from flask import session 
+
+app.secret_key = 'X1243yRH!mMwf'
+
+OR
+
+app.config.update(
+    SECRET_KEY='X1243yRH!mMwf',
+    SESSION_COOKIe_NAME='pyweb_flask_session'
+    PERMANENT_SESSION_LIFETIME=timedelta(31)
+)
+
+* Save to Memory file or DB
