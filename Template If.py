@@ -9,6 +9,6 @@ def helloworld():
 
 @app.route("/home")
 def home():
-    return render_template('index(for).html')
+    return render_template('index(if).html', name = 'Choi')
 
 app.run()
