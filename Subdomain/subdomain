@@ -7,4 +7,4 @@ def helloworld_local():
 
 @app.route("/",subdomain="g")
 def helloworld():
-    return ""Hello G.Local.com!"
+    return "Hello G.Local.com!"
