@@ -1,0 +1,16 @@
+# quotation escape
+{{ abc {ef} ghi }} => {{ "abc {ef} ghi" }}
+                   => {{ 'abc {ef} ghi' | escape }}
+------------------------------------------------
+# safe string escape시키지 마라
+{{ "<strong>Strong</strong>" | safe}}
+------------------------------------------------
+# striptags tag를 벗겨라
+{{ "<strong>Strong</strong>" | striptags}}
+------------------------------------------------
+# {% raw %} ~ {% endraw %} : display source code
+{% raw %}
+    {% if True %}
+        TTT
+    {% endif %}
+{% endraw %}
