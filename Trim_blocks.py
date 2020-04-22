@@ -12,4 +12,4 @@ def helloworld():
 def trim():
     return render_template('index(if).html', name = 'Choi')
 
-app.run()
+app.run() 
