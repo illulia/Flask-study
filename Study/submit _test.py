@@ -10,9 +10,9 @@ def main_get(num=None):
 
 @app.route('/calculate', methods=['POST', 'GET'])
 def calculate(num=None):
-    if request.method == 'POST':
-        pass
-    elif request.method == 'GET':
+    # if request.method == 'POST':
+        #pass
+    if request.method == 'GET':
         temp = request.args.get('num')
         temp = int(temp)
         temp1 = request.args.get('char1')

@@ -1,0 +1,20 @@
+# loop (data)
+a =(1, "만남1", "김건모", False, [])
+b =(2, "만남2", "노사연", False, [a])
+c =(3, "만남3", "익명", False, [a,b])
+d =(4, "만남4", "익명", False, [a,b,c])
+
+return render_template("index.html", lst=[a,b,c,d])
+
+# index.html
+<ul>
+    {% for rank, title, name, hide, ref in lst recurisive %}
+        <li>
+            {{title}}: {{name}}
+                <ul  class="sub">{{ loop(ref)}}</ul>
+        </li>
+    {% end for %}
+</ul>
+
+## 조건문을 재사용 할때 recurisive 사용 
+## loop를 사용해서 안에서 부름
