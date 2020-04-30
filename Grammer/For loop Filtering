@@ -1,0 +1,16 @@
+# data의 세번째 인자로 숨김 여부 추가
+lst = [(1, "만남", "김건모", False), (2, "만남", "노사연", True), (3, "만남", "익명", False)]
+return render_template("index.html", lst=lst)
+
+# index.html
+<ul>
+    {%for rank, title, name, hide in lst if not hide %}
+        <li class="{{loop.cycle('aaa', 'bbb')}}">{{title}}: {{name}}</li>
+</ul>
+
+# for else
+{% for title, name, isShow in lst %}
+    <li class="{{loop.cycle('aaa', 'bbb', '')}}">{{title}}: {{name}}</li>
+{% else %}
+    <li>There is no data.</li>
+{% end for%}
