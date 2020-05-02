@@ -18,13 +18,16 @@ def error():
 
 @app.route("/lp", methods = ['POST', 'GET'])
 def lp():
-    a = 'c'
-    b = 'c'
     id1 = request.args.get("ID")
     pw1 = request.args.get("PW")
-    if id1 == a and pw1 == b:
+    lst = [id1, pw1]
+    if id1 == lst[1] and pw1 == lst[1]:
         return redirect('/home')
     else:
         return redirect('/error')
+
+@app.route("/signin")
+def sign():
+    return  render_template('sign.html')
 
 app.run() 
