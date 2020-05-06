@@ -20,14 +20,13 @@ def error():
 def lp():
     id1 = request.args.get("ID")
     pw1 = request.args.get("PW")
-    lst = [id1, pw1]
-    if id1 == lst[1] and pw1 == lst[1]:
+    if id1 == request.args.get("rid") and pw1 == request.args.get("rpw"):
         return redirect('/home')
     else:
         return redirect('/error')
 
-@app.route("/signin")
-def sign():
-    return  render_template('sign.html')
+@app.route("/rp")
+def rp():
+    return render_template('register.html')
 
 app.run() 
